@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+        name="viewmodel"
+        type="com.basetrack.basetrackqr.login.ui.login.LoginViewModel" />
+  </data>
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c1632">
+
+  <ProgressBar
+      android:id="@+id/progress"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_gravity="bottom|center"
+      android:layout_marginBottom="30dp"
+      android:shadowColor="#46524e" />
+  <EditText
+    android:id="@+id/etLogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:hint="Логин"
+    android:backgroundTint="#f6f2ff"
+    android:textColor="#f6f2ff"
+    android:textColorHint="@color/white"
+    android:textSize="20dp"
+      android:layout_gravity="center"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginBottom="150dp"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+  <EditText
+    android:id="@+id/etPassword"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:hint="Пароль"
+    android:textColorHint="@color/white"
+    android:password="true"
+    android:backgroundTint="#f6f2ff"
+    android:textColor="#f6f2ff"
+    android:textSize="20dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginBottom="150dp"
+      android:layout_marginTop="150dp"
+    app:layout_constraintBottom_toTopOf="@+id/blogin"
+      android:layout_gravity="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/etLogin"
+    />
+  <Button
+    android:id="@+id/blogin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:layout_marginBottom="50dp"
+    android:text="Авторизоваться"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:background="#46524e"
+    app:layout_constraintStart_toStartOf="parent"
+   />
+
+</FrameLayout>
+</layout>

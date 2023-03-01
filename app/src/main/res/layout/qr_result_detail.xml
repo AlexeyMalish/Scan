@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="4dp"
+  android:id="@+id/linearLayout"
+  android:background="@color/back"
+  android:padding="10dp"
+  >
+  <TextView
+    android:id="@+id/id_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?attr/textAppearanceListItem"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="key"
+    android:textColor="@color/white"
+    android:background="@color/back"
+    android:layout_marginLeft="35dp"
+    android:textStyle="bold"/>
+  <TextView
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/back"
+    android:textAppearance="?attr/textAppearanceListItem"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toStartOf="@+id/content"
+    app:layout_constraintStart_toEndOf="@+id/id_text"
+    app:layout_constraintTop_toTopOf="parent"
+    android:text=":" />
+  <TextView
+    android:id="@+id/content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:textAppearance="?attr/textAppearanceListItem"
+    app:layout_constraintStart_toEndOf="@+id/id_text"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="value"
+    android:background="@color/back"
+    android:textColor="@color/white"
+    android:textStyle="bold"/>
+
+  <TextView
+    android:id="@+id/date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Time :"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/id_text"
+    android:layout_marginLeft="35dp"
+    android:textColor="@color/white"/>
+
+  <CheckBox
+    android:id="@+id/check"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:button="@drawable/custom_checkbox"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

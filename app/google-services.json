@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "721613922560",
+    "project_id": "basetrackqr",
+    "storage_bucket": "basetrackqr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721613922560:android:c64f06f6a32575aac953e5",
+        "android_client_info": {
+          "package_name": "com.basetrack.basetrackqr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721613922560-5528ptl1i27fr5i6rsl2u3lk3oj6gm49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATjcZ7Ov8kOuQFmj9BNBmzqxhZcQRNagQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721613922560-5528ptl1i27fr5i6rsl2u3lk3oj6gm49.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

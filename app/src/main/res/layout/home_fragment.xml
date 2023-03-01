@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data>
+  </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/back">
+
+  <Button
+    android:id="@+id/scan"
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginLeft="55dp"
+    android:layout_marginRight="55dp"
+    android:padding="10dp"
+    android:background="@drawable/button_background"
+    android:text="@string/name"
+    android:textColor="@color/white"
+    android:textSize="22dp"
+    app:layout_constraintBottom_toTopOf="@+id/history"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+    android:id="@+id/history"
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="55dp"
+    android:layout_marginRight="55dp"
+    android:padding="10dp"
+    android:background="@drawable/button_background"
+    android:text="History"
+    android:textColor="@color/white"
+    android:textSize="22dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+  <Button
+    android:id="@+id/tracking"
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="55dp"
+    android:layout_marginRight="55dp"
+    android:padding="10dp"
+    android:background="@drawable/button_background"
+    android:text="Tracking"
+    android:textColor="@color/white"
+    android:textSize="22dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

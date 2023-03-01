@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/navigation"
+  app:startDestination="@id/Splash">
+
+  <fragment
+    android:id="@+id/Splash"
+    android:name="com.basetrack.basetrackqr.login.ui.spalsh.SplashFragment"
+    android:label="splash_fragment"
+    tools:layout="@layout/splash">
+    <action
+      android:id="@+id/action_splashFragmentToLoginFragment"
+      app:destination="@+id/Login"/>
+
+    <action
+      android:id="@+id/action_splashFragmentToHomeFragment"
+      app:destination="@+id/Home"/>
+  </fragment>
+
+  <fragment
+    android:id="@+id/Login"
+    android:name="com.basetrack.basetrackqr.login.ui.login.LoginFragment"
+    android:label="login_fragment"
+    tools:layout="@layout/login">
+  <action
+    android:id="@+id/action_loginFragmentToHomeFragment"
+    app:destination="@+id/Home"/>
+  </fragment>
+
+  <fragment
+    android:id="@+id/Home"
+    android:name="com.basetrack.basetrackqr.qrScan.ui.HomeFragment"
+    android:label="home_fragment"
+    tools:layout="@layout/home_fragment" >
+    <action
+      android:id="@+id/action_homeFragmentToMainCameraFragment"
+      app:destination="@+id/mainFragment"/>
+
+    <action
+      android:id="@+id/action_homeFragmentToQrResultFragment"
+      app:destination="@+id/qrResultFragment"/>
+
+    <action
+      android:id="@+id/action_homeFragmentToTrackingFragment"
+      app:destination="@+id/TrackingFragment"/>
+
+  </fragment>
+
+
+  <fragment
+    android:id="@+id/TrackingFragment"
+    android:name="com.basetrack.basetrackqr.tracking.ui.tracking.TrackingFragment"
+    android:label="tracking_fragment"
+    tools:layout="@layout/tracking" >
+
+    <action
+      android:id="@+id/action_trackingFragmentToCapturePhotoFragment"
+      app:destination="@+id/permissions_fragment"/>
+
+    <action
+      android:id="@+id/action_trackingFragmentToQrResultFragment"
+      app:destination="@+id/qrResultFragment"/>
+
+    <action
+      android:id="@+id/action_tracking_to_scan_fragment"
+      app:destination="@+id/mainFragment"/>
+
+    <action
+      android:id="@+id/action_tracking_to_home"
+      app:destination="@+id/Home"/>
+
+  </fragment>
+
+
+  <fragment
+    android:id="@+id/mainFragment"
+    android:name="com.basetrack.basetrackqr.qrScan.ui.mainCamera.MainCameraFragment"
+    android:label="camera_main_fragment"
+    tools:layout="@layout/camera_fragment" >
+    <action
+      android:id="@+id/action_mainFragmentToResultFragment"
+      app:destination="@+id/qrResultFragment"/>
+
+  </fragment>
+
+  <fragment
+    android:id="@+id/qrResultFragment"
+    android:name="com.basetrack.basetrackqr.qrScan.ui.qrResult.QrResultFragment"
+    android:label="qr_result_fragment"
+    tools:layout="@layout/qr_result" >
+
+    <action
+      android:id="@+id/action_history_to_tracking"
+      app:destination="@+id/TrackingFragment"/>
+
+  </fragment>
+
+
+  <fragment
+    android:id="@+id/permissions_fragment"
+    android:name="com.basetrack.basetrackqr.tracking.ui.photo.PermissionsFragment"
+    android:label="PermissionsFragment"
+    >
+
+    <action
+      android:id="@+id/action_permissions_to_camera"
+      app:destination="@id/camera_fragment"
+      app:popUpTo="@id/permissions_fragment"
+      app:popUpToInclusive="true" />
+
+  </fragment>
+
+  <fragment
+    android:id="@+id/camera_fragment"
+    android:name="com.basetrack.basetrackqr.tracking.ui.photo.CameraFragment"
+    android:label="CameraFragment"
+    tools:layout="@layout/fragment_camera">
+
+    <action
+      android:id="@+id/action_camera_to_gallery"
+      app:destination="@id/gallery_fragment" />
+
+    <action
+      android:id="@+id/action_camera_to_permissions"
+      app:destination="@id/permissions_fragment"
+      app:popUpTo="@id/camera_fragment"
+      app:popUpToInclusive="true"/>
+
+  </fragment>
+
+  <fragment
+    android:id="@+id/gallery_fragment"
+    android:name="com.basetrack.basetrackqr.tracking.ui.photo.GalleryFragment"
+    android:label="gallery_fragment"
+    tools:layout="@layout/fragment_gallery">
+    <argument
+      android:name="root_directory"
+      app:argType="string" />
+
+    <action
+      android:id="@+id/action_galleru_to_tracking"
+      app:destination="@+id/TrackingFragment"/>
+  </fragment>
+
+
+
+
+
+
+</navigation>
